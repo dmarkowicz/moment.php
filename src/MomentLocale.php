@@ -58,6 +58,10 @@ class MomentLocale
         }
 
         self::$localeContent = require $pathFile;
+
+        if (!isset(self::$localeContent['monthsNominative'])) {
+            self::$localeContent['monthsNominative'] = self::$localeContent['months'];
+        }
     }
 
     /**
